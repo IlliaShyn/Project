@@ -1,10 +1,15 @@
 import React from 'react';
+import { Text, StyleSheet } from 'react-native';
 
 const InfoMessage = ({ text }) => {
-  return <div style={{ color: 'blue' }}>{text}</div>;
+  return <Text style={styles.message}>{text}</Text>;
 };
 
-export default InfoMessage;
+const styles = StyleSheet.create({
+  message: {
+    color: 'blue',
+    fontSize: 18,
+  },
+});
 
-// Usage
-// <InfoMessage text="This is an informational message." />
+export default InfoMessage;
